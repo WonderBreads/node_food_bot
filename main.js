@@ -1,7 +1,8 @@
 const axios = require("axios")
 const { Telegraf, Context } = require("telegraf");
 
-const bot = new Telegraf("5346927809:AAFqMh1RHq9xUFNMfYHUH-0ObLHEYAyQ6Cw");
+const bot = new Telegraf(process.env.TELEGRAM_FOOD_API_KEY);
+    
 
 bot.start((context) => context.reply(`Welcome ${context.from.first_name} please type /random for a random food`));
 bot.help((context) => context.reply("Its a random food generator(for now), type /random to get a random food I dont know how to make it simpler than that. Sorry if you need somethingelse, I suggest you use this greate tool calle google.com to find what your looking for.😅"))
